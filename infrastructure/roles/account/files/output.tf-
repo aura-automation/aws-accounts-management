@@ -1,0 +1,6 @@
+output "account_1" {
+  value = {
+        arn = "${aws_organizations_account.account_1.arn}"
+        id = "${aws_organizations_account.account_1.id}"
+    }
+}

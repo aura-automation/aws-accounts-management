@@ -1,0 +1,4 @@
+---
+- name: Create remote statebucket
+  s3_bucket:
+    name: account-remote-state

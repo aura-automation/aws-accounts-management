@@ -1,0 +1,14 @@
+---
+- name: Create remote statebucket
+  shell: terraform init
+  args:
+    chdir: roles/account/files
+    
+- name: terraform action
+  shell: terraform {{ tf_mode }} {{ extra_param }}
+  args:
+    chdir: roles/account/files
+  register: terraform_actions
+
+- debug:
+    msg: "{{ terraform_actions.stdout_lines }}"
